@@ -36,6 +36,7 @@ public class ExtensionsTests
         actual.Should().BeEquivalentTo(expected);
     }
 
+    [Fact]
     public void Filter_Leap_Years()
     {
         //Arrange

@@ -9,6 +9,7 @@ public class ImmutableStudentTest
         s.ToString().Should().Be(expected);
     }
 
+    [Fact]
     public void ImmstaticStudent_Equality() {
         var s1 = new ImmutableStudent(1, "Silas", "Arildsen", Students.StudentStatus.New,  new DateTime(2021, 8, 1), new DateTime(2024, 6, 1), new DateTime(2024, 6, 1));
         var s2 = new ImmutableStudent(1, "Silas", "Arildsen", Students.StudentStatus.New,  new DateTime(2021, 8, 1), new DateTime(2024, 6, 1), new DateTime(2024, 6, 1));
