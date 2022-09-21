@@ -3,6 +3,25 @@ namespace Assignment2.Tests;
 public class ExtensionsTests
 {
     [Fact]
+    public void Is_Secure_True() {
+        //Arrange
+        var uriTrue = new Uri("https://console.firebase.google.com/");
+        var uriFalse = new Uri("http://console.firebase.google.com/");
+
+        Assert.True(uriTrue.IsSecure());
+        Assert.False(uriFalse.IsSecure());
+    }
+    
+    [Fact]
+    public void WordCount_is_5 () {
+        var input = "hi my name is Bob";
+
+        var actual = input.WordCount();
+
+        actual.Should().Be(5);
+    }
+
+    [Fact]
     public void Flatten_numbers_in_xs()
     {
         //Arrange
@@ -39,7 +58,7 @@ public class ExtensionsTests
     [Fact]
     public void Filter_Leap_Years()
     {
-        //Arrange
+        //ArrangeSS
         var xs = new List<int>{1604, 1607, 1608, 2001, 2120};
         var expected = new [] {1604, 1608, 2120};
         Predicate<int> pred = Pred;
