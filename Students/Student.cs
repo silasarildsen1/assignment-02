@@ -33,9 +33,7 @@ public class Student
             }
         }
     }
-    public enum StudentStatus{
-        New, Active, Dropout, Graduated
-    }
+
     public DateTime StartDate {get; set;}
     public DateTime EndDate {get; set;}
     public DateTime GraduationDate {get; set;}
